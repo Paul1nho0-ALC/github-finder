@@ -4,22 +4,20 @@ import jsonData from '../../../data.json'
 import { LuMapPin, LuLink, LuBuilding2, LuTwitter } from 'react-icons/lu'
 
 export const User = () => {
-  const obj = {}
-
   const {
-    avatar_url = null,
-    name = null,
-    login = null,
-    bio = null,
-    created_at = null,
-    html_url = null,
-    public_repos = null,
-    followers = null,
-    following = null,
-    location = null,
-    twitter_username = null,
-    blog = null,
-    company = null,
+    avatar_url,
+    name,
+    login,
+    bio,
+    created_at,
+    html_url,
+    public_repos,
+    followers,
+    following,
+    location,
+    twitter_username,
+    blog,
+    company,
   } = jsonData
 
   return (
