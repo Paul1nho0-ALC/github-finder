@@ -4,7 +4,7 @@ import { ChangeEvent, useContext, useState } from 'react'
 import { LuSearch } from 'react-icons/lu'
 
 export const Header = () => {
-  const { handleSetUser, user } = useContext(UserContext)
+  const { handleSetUser } = useContext(UserContext)
   const [value, setValue] = useState('')
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -27,7 +27,7 @@ export const Header = () => {
         <input
           type="text"
           placeholder="Search Github username ..."
-          className="w-full h-14 px-12 outline-none rounded-md bg-slate-800 placeholder:text-slate-50"
+          className="w-full text-xs sm:text-base h-14 px-12 outline-none rounded-md bg-slate-800 placeholder:text-slate-50"
           value={value}
           onChange={(e) => handleChange(e)}
         />
