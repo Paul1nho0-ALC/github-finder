@@ -1,3 +1,4 @@
+import { UserContextProvider } from '@/contexts/UserContext'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
@@ -8,7 +9,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'Github finder',
+  title: 'Github Finder',
   description: 'Search for github profiles',
 }
 
@@ -21,9 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         style={montserrat.style}
-        className="bg-zinc-800 h-screen w-full text-zinc-100 flex items-center justify-center"
+        className="bg-slate-950 h-screen w-full text-slate-50 flex justify-center"
       >
-        {children}
+        <UserContextProvider>{children}</UserContextProvider>
       </body>
     </html>
   )
